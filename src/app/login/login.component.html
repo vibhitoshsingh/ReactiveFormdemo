@@ -1,0 +1,19 @@
+
+<form [formGroup]="loginForm" (submit)="saveUser()">
+  <h2>Login </h2>
+ 
+  <label for="email">Email</label>
+  <input formControlName="email" id="email" />
+  <app-validationmessage [control]="loginForm.controls.email"></app-validationmessage>
+
+ <label for="password">Password</label>
+  <input type="password" formControlName="password" id="password" />
+  <app-validationmessage [control]="loginForm.controls.password"></app-validationmessage>
+
+  <button type="submit" [disabled]="!loginForm.valid">Login</button>
+  Are you new! ? <a routerLink="/registration"> Get started here</a>
+</form>
+
+
+
+
